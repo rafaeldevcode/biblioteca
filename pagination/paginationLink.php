@@ -26,3 +26,10 @@ function my_pagination() {
     endwhile;
     
     my_pagination();
+
+
+
+/*<nav class="pagination">
+    <a class="prev"><?php next_post_link( '%link', '<i class="fas fa-arrow-right"></i> <' ); ?></a>
+    <a class="next"><?php previous_post_link( '%link', '<i class="fas fa-arrow-right"></i> >' ); ?></a>
+</nav>*/
