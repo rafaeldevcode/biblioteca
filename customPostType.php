@@ -1,26 +1,26 @@
 <?php 
 /*
-Plugin Name: My Custom Post Typs Scroll
-Desccription: Add post typs for Scroll
+Plugin Name: My Custom Post Typs Temp
+Desccription: Add post typs for Temp
 Author: Rafael Vieira
 */
 
-add_action('init', 'lc_custom_post_scroll');
+add_action('init', 'lc_custom_post_temp');
 
 // Função para registrar meu tipo de post
-function lc_custom_post_scroll(){
+function lc_custom_post_temp(){
 
     // Define os rótulos, esta variavel e usada no array $args 
     $labels = array(
-        'name'               => __( 'Scroll' ),
-        'singular_name'      => __( 'Scrolls' ),
-        'add_new'            => __( 'Add New Scroll' ),
-        'add_new_item'       => __( 'Add New Scroll' ),
-        'edit_item'          => __( 'Edit Scroll' ),
+        'name'               => __( 'Temp' ),
+        'singular_name'      => __( 'Temps' ),
+        'add_new'            => __( 'Add New Temp' ),
+        'add_new_item'       => __( 'Add New Temp' ),
+        'edit_item'          => __( 'Edit Temp' ),
         'new_item'           => __( 'New v' ),
-        'all_items'          => __( 'All Scroll' ),
-        'view_item'          => __( 'View Scroll' ),
-        'search_items'       => __( 'Search Scroll' ),
+        'all_items'          => __( 'All Temp' ),
+        'view_item'          => __( 'View Temp' ),
+        'search_items'       => __( 'Search Temp' ),
         'featured_image'     => 'Poster',
         'set_featured_image' => 'Add Poster'
     );
@@ -31,7 +31,7 @@ function lc_custom_post_scroll(){
         'labels'            => $labels,
         'description'       => 'Holds our movies and movie specific data',
         'public'            => true,
-        'menu_position'     => 5,
+        'menu_position'     => 4,
         'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'custom-fields' ),
         'has_archive'       => true,
         'show_in_admin_bar' => true,
@@ -44,6 +44,6 @@ function lc_custom_post_scroll(){
     // Chame a função real do WordPress
     // Parâmetro 1 é um nome para o tipo de postagem
     // O parâmetro 2 é o array $ args
-    register_post_type('scroll', $args);
+    register_post_type('Temp', $args);
 
 }
