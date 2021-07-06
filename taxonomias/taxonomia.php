@@ -14,15 +14,15 @@ function create_topics_hierarchical_taxonomy() {
     $labels = array(
         'name' =>_x( 'Topics', 'taxonomy general name' ),
         'singular_name' =>_x( 'Topic', 'taxonomy singular name' ),
-        'search_items' =>__( 'Search Topics' ),
-        'all_items' =>__( 'All Topics' ),
-        'parent_item' =>__( 'Parent Topic' ),
-        'parent_item_colon' =>__( 'Parent Topic:' ),
-        'edit_item' =>__( 'Edit Topic' ),
-        'update_item' =>__( 'Update Topic' ),
-        'add_new_item' =>__( 'Add New Topic' ),
-        'new_item_name' =>__( 'New Topic Name' ),
-        'menu_name' =>__( 'Topics' ),
+        'search_items' =>__( 'Pesquisar TopicC' ),
+        'all_items' =>__( 'Todos os TopicC' ),
+        'parent_item' =>__( 'TopicC pai' ),
+        'parent_item_colon' =>__( 'TopicC pai:' ),
+        'edit_item' =>__( 'Editar TopicC' ),
+        'update_item' =>__( 'Atualizar TopicC' ),
+        'add_new_item' =>__( 'Adicionar Novo TopicC' ),
+        'new_item_name' =>__( 'Novo Nome TopicC' ),
+        'menu_name' =>__( 'TopicsC' ),
  );  
 
     // Agora registre a taxonomia
@@ -32,7 +32,7 @@ function create_topics_hierarchical_taxonomy() {
         'show_ui' =>true,
         'show_admin_column' =>true,
         'query_var' =>true,
-        'rewrite' =>array( 'slug' => 'topic' ),
+        'rewrite' =>array( 'slug' => 'topicC' ),
  ));
 }
 ?>
@@ -58,8 +58,8 @@ function create_topics_hierarchical_taxonomy() {
         'parent_item_colon' =>__( 'Topic Pai:' ),
         'edit_item' =>__( 'Ediatr Topic' ),
         'update_item' =>__( 'Atualizar Topic' ),
-        'add_new_item' =>__( 'Adicionar novo Topic' ),
-        'new_item_name' =>__( 'Novo nome Topic' ),
+        'add_new_item' =>__( 'Adicionar Novo Topic' ),
+        'new_item_name' =>__( 'Novo Nome Topic' ),
         'menu_name' =>__( 'Topics' ),
  );  
 
