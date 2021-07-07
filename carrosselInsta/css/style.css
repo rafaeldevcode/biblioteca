@@ -1,0 +1,128 @@
+.result{
+    width: 310px;
+    margin: auto;
+}
+
+.slideItems{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slideItems > *{
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slideItems > .active{
+    position: relative;
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.result .item-box{
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border: 1px solid rgb(216, 215, 215);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: border .2s, background-color .2s;
+}
+
+.result .item-box:hover{
+    border: 1px solid #8b026691;
+    background-color: #fc19bf09;
+}
+
+.result .item-box .top{
+    padding-bottom: 20px;
+}
+
+.result .item-box .top p{
+    padding: 0 5px;
+    font-size: 1.2em;
+}
+
+.result .item-box .top a{
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    color: rgb(52, 52, 252);
+    transition: color .3s;
+}
+
+.result .item-box .top a:hover{
+    color: #b90089;
+}
+
+.result .item-box .top .media{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding: 15px;
+}
+
+.result .item-box .top .media p{
+    color: #b90089;
+    font-size: 1.3em;
+}
+
+.result .item-box .top .media .media-left img{
+    width: 54px;
+    margin-right: 20px;
+}
+
+.result .item-box .bottom img{
+    width: 100%;
+}
+
+.result .slideThumb{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.result .slideThumb > button{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, .4);
+    border: none;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.result .slideThumb > button.active{
+    background-color: #b90089;
+}
+
+.result .slideNav .slideNext{
+    display: none;
+}
+
+.result .slideThumb > button.actve::after{
+    content: "";
+    display: block;
+    height: inherit;
+    background-color: #b90089;
+    border: 3px;
+    /* transform: translateX(-100%);
+    animation: thumb 5s forwards linear; */
+}
+
+/* @keyframes thumb {
+    to{
+        transform: initial;
+    }
+} */
