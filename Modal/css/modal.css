@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.modal-container{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(19, 19, 19, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    display: flex;
+    flex-wrap: wrap  ;
+    justify-content: center;
+    background: url(./img/modal.jpg) no-repeat;
+    width: 320px;
+    height: 402px;
+    position: relative;    
+}
+
+.modal-container .clossed{
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    font-family: sans-serif;
+    color: #fff;
+    padding: 3px 1px 0;
+    background-color: rgba(255, 6, 6, 0.808);
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+}
+
+.modal .faixa{
+    width: 100%;
+    background-color: #fc0;
+    color: rgb(255, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: bolder;
+    line-height: 20px;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+.modal-container .modal .banner{
+    width: 100%;
+    padding: 10px;
+    display: block;
+}
+
+.modal-container .modal .banner .img img{
+    width: 100px;
+}
+
+.modal-container .modal .banner .preco-btn{
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 150px;
+}
+
+.modal-container .modal .banner .preco-btn .preco p{
+    font-size: 30px;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: rgb(255, 0, 0);
+}
+.modal-container .modal .banner .preco-btn .preco .span-1{
+    text-decoration: line-through;
+    color: rgb(68, 68, 68);
+}
+
+.modal-container .modal .banner .preco-btn .preco strong{
+    font-size: 35px;
+}
+
+.modal-container .modal .banner .preco-btn input{
+    cursor: pointer;
+    width: 200px;
+    margin-top: 20px;
+    padding: 15px 0;
+    border: 2px solid green;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(4, 182, 4);
+    transition: .3s ease-out;
+}
+
+.modal input:hover{
+    transform: scale(1.10);
+}

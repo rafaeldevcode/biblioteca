@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="./css/modal.css">
+        <div class="modal-container">
+            <div class="modal">
+                <button class="clossed">X</button>                
+                    <div class="faixa"><span>ESPERE! VOÇÊ ACABOU DE <br/> GANHAR UM DESCONTO</span></div>
+                        <div class="banner">
+                            <!-- <div class="img">
+                                <img src="./promo.webp" alt="Promocao">
+                            </div> -->
+                            <div class="preco-btn">
+                                <div class="preco-satisfacao">
+                                    <!-- <div class="logo-satisfacao">
+                                        <img src="./favicon.png" alt="satisfacao">
+                                    </div> -->
+                                    <div class="preco">
+                                        <p><span class="span-1">De 147,00</span><br>Por <strong>R$89,90</strong></p>
+                                    </div>
+                                </div>
+                                <a href="#">
+                                    <form>
+                                        <input type="button" value="QUERO DESCONTO">
+                                    </form>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div>
+
+    <script src="./js/modal.js"></script>
+    <script>
+
+        Bounceback.init(options = {method:"history"})
+
+        Bounceback.init({
+        onBounce: function() {
+            document.querySelector('.modal-container').style.display = 'flex';     
+           
+            document.querySelector('.clossed').addEventListener('click', ()=>{
+                document.querySelector('.modal-container').style.display = 'none';
+            })
+        }
+        })
+    </script>
