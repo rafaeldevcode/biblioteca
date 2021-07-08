@@ -1,6 +1,15 @@
-.result{
-    width: 310px;
+.resultBox:nth-child(2){
+    display: none;
+}
+
+.resultBox:nth-child(3){
+    display: none;
+}
+
+.resultBox{
+    width: 100%;
     margin: auto;
+    display: block;
 }
 
 .slideItems{
@@ -26,7 +35,7 @@
     pointer-events: initial;
 }
 
-.result .item-box{
+.resultBox .itemBox{
     width: 300px;
     height: auto;
     margin: 10px;
@@ -41,21 +50,21 @@
     transition: border .2s, background-color .2s;
 }
 
-.result .item-box:hover{
+.resultBox .itemBox:hover{
     border: 1px solid #8b026691;
     background-color: #fc19bf09;
 }
 
-.result .item-box .top{
+.resultBox .itemBox .topBox{
     padding-bottom: 20px;
 }
 
-.result .item-box .top p{
+.resultBox .itemBox .topBox p{
     padding: 0 5px;
     font-size: 1.2em;
 }
 
-.result .item-box .top a{
+.resultBox .itemBox .topBox a{
     margin-bottom: 20px;
     text-decoration: none;
     font-size: 1em;
@@ -63,66 +72,101 @@
     transition: color .3s;
 }
 
-.result .item-box .top a:hover{
+.resultBox .itemBox .topBox a:hover{
     color: #b90089;
 }
 
-.result .item-box .top .media{
+.resultBox .itemBox .topBox .mediaBox{
     display: flex;
     flex-flow: row;
     align-items: center;
     padding: 15px;
 }
 
-.result .item-box .top .media p{
+.resultBox .itemBox .topBox .mediaBox p{
     color: #b90089;
     font-size: 1.3em;
 }
 
-.result .item-box .top .media .media-left img{
+.resultBox .itemBox .topBox .mediaBox .mediaLeft img{
     width: 54px;
     margin-right: 20px;
 }
 
-.result .item-box .bottom img{
+.resultBox .itemBox .bottomBox img{
     width: 100%;
 }
 
-.result .slideThumb{
+.resultBox .slideThumb{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-.result .slideThumb > button{
-    cursor: pointer;
+.resultBox .slideThumb > button{
+    /* cursor: pointer; */
     width: 15px;
     height: 15px;
+    margin: 0 20px;
     background-color: rgba(0, 0, 0, .4);
     border: none;
     border-radius: 100%;
     overflow: hidden;
 }
 
-.result .slideThumb > button.active{
+.resultBox .slideThumb > button.active{
     background-color: #b90089;
 }
 
-.result .slideNav .slideNext{
+.resultBox .slideNav .slideNext{
     display: none;
 }
 
-.result .slideThumb > button.actve::after{
+.resultBox .slideThumb > button.actve::after{
     content: "";
     display: block;
     height: inherit;
     background-color: #b90089;
     border: 3px;
-    /* transform: translateX(-100%);
-    animation: thumb 5s forwards linear; */
 }
 
-/* @keyframes thumb {
-    to{
-        transform: initial;
+.resultBox .slideItems .activeItems {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width:750px){
+    .resultBox:nth-child(1){
+        display: none;
     }
-} */
+    .resultBox:nth-child(3){
+        display: none;
+    }
+    .resultBox:nth-child(2){
+        width: 510px;
+        display: block;
+    }
+}
+
+
+@media (max-width:420px){
+    .resultBox:nth-child(1){
+        display: none;
+    }
+
+    .resultBox:nth-child(2){
+        display: none;
+    }
+    
+    .resultBox:nth-child(3){
+        width: 310px;
+        display: block;
+    }
+
+    .resultBox .slideThumb > button{
+        margin: 0 10px;
+    }
+}

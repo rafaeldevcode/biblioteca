@@ -1,4 +1,4 @@
-class SlideStories{
+class SlideStoriesMobile{
     constructor(id){
         this.slide = document.querySelector(`[data-slide="${id}"]`);
         this.active = 0;
@@ -59,5 +59,4 @@ class SlideStories{
     }
 }
 
-
-new SlideStories ('slide');
+new SlideStories ('slideMobile');
