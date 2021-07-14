@@ -137,6 +137,11 @@
     align-items: center;
 }
 
+.resultBox .slider{
+    transform: translateX(0);
+    transition: transform .3s ease-out;
+}
+
 
 @media (max-width:750px){
     .resultBox:nth-child(1){
