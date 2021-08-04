@@ -21,7 +21,19 @@ function my_video_button() {
    }
 
 }
+// VIMEO
+function add_video_vimeo( $atts = array(), $content = null ) {
+  
+   // set up default parameters
+   extract(shortcode_atts(array(
+    'id' => '#'
+   ), $atts));
 
+   return '<div></div><div class="video"><div class="top"></div><iframe src="https://player.vimeo.com/video/'. $id . '?badge=0&autopause=0&player_id=0&app_id=58479" 
+   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="botton"></div></div>';
+}
+
+// YOUTUBE
 function add_video_youtube($atts, $content = null) {
     extract(shortcode_atts(array(
        'src' => '#',
@@ -32,6 +44,7 @@ function add_video_youtube($atts, $content = null) {
  }
 
 add_action('init', 'my_video_button');
+add_shortcode('vimeo', 'add_video_vimeo');
 add_shortcode('youtube', 'add_video_youtube');
 ?>
 

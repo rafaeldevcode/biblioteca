@@ -5,14 +5,22 @@
              title : 'Adicionar Video',
              image : url+'/video.png',
              onclick : function() {
-                var src = prompt("Digite a URL do video");
-                   if (src != null && src != ''){
-                      ed.execCommand('mceInsertContent', false, '[youtube src="'+src+'"]');
-                   }
-                   else{
-                      ed.execCommand('mceInsertContent', false, '[youtube]');
-                   }
-               //  }
+               let codigo = prompt("Digite o código correspondente a plataforma\n 1 - Youtube\n 2 - Vimeo");
+                  if(codigo == 1){
+                     let src = prompt("Digite a URL do video.");
+                     if (src != null && src != ''){
+                        ed.execCommand('mceInsertContent', false, '[youtube src="'+src+'"]');
+                     }else{
+                        ed.execCommand('mceInsertContent', false, '[youtube src=""]');
+                     }
+                  }else if(codigo == 2){
+                     let id = prompt("Digite a URL do video.");
+                     if (id != null && id != ''){
+                        ed.execCommand('mceInsertContent', false, '[vimeo id="'+id+'"]');
+                     }else{
+                        ed.execCommand('mceInsertContent', false, '[vimeo id=""]');
+                     }  
+                  }
              }
           });
        },
