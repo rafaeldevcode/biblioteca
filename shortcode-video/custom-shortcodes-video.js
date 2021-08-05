@@ -11,15 +11,19 @@
                      if (src != null && src != ''){
                         ed.execCommand('mceInsertContent', false, '[youtube src="'+src+'"]');
                      }else{
-                        ed.execCommand('mceInsertContent', false, '[youtube src=""]');
+                        alert("Nenhuma URL foi digitada!");
+                        // ed.execCommand('mceInsertContent', false, '[youtube src=""]');
                      }
                   }else if(codigo == 2){
                      let id = prompt("Digite a URL do video.");
                      if (id != null && id != ''){
                         ed.execCommand('mceInsertContent', false, '[vimeo id="'+id+'"]');
                      }else{
-                        ed.execCommand('mceInsertContent', false, '[vimeo id=""]');
+                        alert("Nenhum ID foi digitado!");
+                        // ed.execCommand('mceInsertContent', false, '[vimeo id=""]');
                      }  
+                  }else{
+                     alert("Código inválido!");
                   }
              }
           });
