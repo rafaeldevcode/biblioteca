@@ -15,7 +15,7 @@
                         // ed.execCommand('mceInsertContent', false, '[youtube src=""]');
                      }
                   }else if(codigo == 2){
-                     let id = prompt("Digite a URL do video.");
+                     let id = prompt("Digite o ID do video.");
                      if (id != null && id != ''){
                         ed.execCommand('mceInsertContent', false, '[vimeo id="'+id+'"]');
                      }else{
