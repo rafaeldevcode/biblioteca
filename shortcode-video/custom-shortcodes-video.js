@@ -5,7 +5,7 @@
              title : 'Adicionar Video',
              image : url+'/video.png',
              onclick : function() {
-               let codigo = prompt("Digite o código correspondente a plataforma\n 1 - Youtube\n 2 - Vimeo");
+               let codigo = prompt("Digite o número correspondente a plataforma\n 1 - Youtube\n 2 - Vimeo");
                   if(codigo == 1){
                      let src = prompt("Digite a URL do video.");
                      if (src != null && src != ''){
