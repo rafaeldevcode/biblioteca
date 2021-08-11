@@ -75,7 +75,7 @@
 
 	Bounceback.options = {
 		distance: 100, // The minimum distance in px from the top to consider triggering for
-		maxDisplay: 1, // The maximum number of times the dialog may be shown on one page, or 0 for unlimited.  Only applicable when using the mouse based method
+		maxDisplay: 0, // The maximum number of times the dialog may be shown on one page, or 0 for unlimited.  Only applicable when using the mouse based method
 		method: "auto", // The bounce detection method
 		sensitivity: 10, // The minimum distance the mouse has to have moved in the last 10 mouse events for onBounce to be triggered
 		cookieLife: 365, // The cookie (when localStorage isn't available) expiry age, in days
