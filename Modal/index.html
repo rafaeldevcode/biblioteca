@@ -8,12 +8,11 @@
     <title>Modal</title>
 </head>
 <body>
-    <!-- <button id="ver">Ver</button> -->
-    <div class="modal">
 
+    <div class="modal">
         <div class="modalex">
             <div class="clossed">
-                <button class="btn"></button>
+                <button class="btnClossed"></button>
             </div>
 
             <div class="faixa">
@@ -42,17 +41,21 @@
 
     <script src="./js/bounceback.js"></script>
     <script>
-        Bounceback.init([history])
 
-        Bounceback.init({
-        onBounce: function() {
-            document.querySelector(".modal").style.display = "flex";
+        Bounceback.init(options = {method:"auto"})
+            Bounceback.init({
+            onBounce: function() {
+                document.querySelector(".modal").style.display = "flex";
+                clossedModal();
+            }
+
+        })
+
+        function clossedModal(){
+            document.querySelector(".btnClossed").addEventListener("click", ()=>{
+                document.querySelector(".modal").classList = "modal clossed-modal";
+            })
         }
-        })
-
-        document.querySelector(".btn").addEventListener("click", ()=>{
-            document.querySelector(".modal").classList = "modal clossed-modal";
-        })
     </script>
 </body>
 </html>
