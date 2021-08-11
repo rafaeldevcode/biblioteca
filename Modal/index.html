@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Modal</title>
+</head>
+<body>
+    <!-- <button id="ver">Ver</button> -->
+    <div class="modal">
+
+        <div class="modalex">
+            <div class="clossed">
+                <button class="btn"></button>
+            </div>
+
+            <div class="faixa">
+                <h2>ESPERE! VOCÊ ACABOU DE GANHAR UM DESCONTO</h2>
+            </div>
+
+            <div class="produto">
+                <img src="./img/produto.png" alt="Produto">
+            </div>
+
+            <div class="box-satisfacao">
+                <div class="satisfacao">
+                    <img src="./img/satisfacao.png" alt="Satisfacao garantida">
+                </div>
+                <div class="btn-preco">
+                    <div class="preco">
+                        <p><span>De 367,00</span><br>Por 147,00</p>
+                    </div>
+                    <div class="btn-quero">
+                        <a href="#">EU QUERO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".btn").addEventListener("click", ()=>{
+            document.querySelector(".modal").classList = "clossed-modal";
+        })
+    </script>
+</body>
+</html>
