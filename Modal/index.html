@@ -40,7 +40,16 @@
         </div>
     </div>
 
+    <script src="./js/bounceback.js"></script>
     <script>
+        Bounceback.init([history])
+
+        Bounceback.init({
+        onBounce: function() {
+            document.querySelector(".modal").style.display = "flex";
+        }
+        })
+
         document.querySelector(".btn").addEventListener("click", ()=>{
             document.querySelector(".modal").classList = "modal clossed-modal";
         })
