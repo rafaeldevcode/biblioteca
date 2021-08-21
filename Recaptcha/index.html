@@ -1,4 +1,32 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Rafael Vieira">
+  <title>reCaptcha</title>
+
+  <script>
+    grecaptcha.execute();
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  
+  <!-- Vincule programaticamente o desafio a um botão ou invoque o desafio. -->
+  <div class="g-recaptcha"
+      data-sitekey="_your_site_key_"
+      data-callback="onSubmit"
+      data-size="invisible">
+</div>
+
+</body>
+</html>
+
+
+<!-- Vincule automaticamente o desafio a um botão -->
+<!-- <html>
   <head>
     <title>reCAPTCHA demo: Simple page</title>
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -14,4 +42,4 @@
       <br/>
     </form>
   </body>
-</html>
+</html> -->
