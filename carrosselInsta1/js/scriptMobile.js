@@ -59,4 +59,4 @@ class SlideStoriesMobile{
     }
 }
 
-new SlideStories ('slideMobile');
+new SlideStoriesMobile ('slideMobile');
