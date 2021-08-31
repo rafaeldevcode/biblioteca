@@ -1,8 +1,7 @@
 <?php 
-// Plugin para adicionar um post type personalizado
 /*
 Plugin Name: My Custom Post Typs Temp
-Desccription: Adicionar posts para Temp
+Desccription: Add post typs for Temp
 Author: Rafael Vieira
 */
 
@@ -48,13 +47,3 @@ function lc_custom_post_temp(){
     register_post_type('Temp', $args);
 
 }
-
-// Adiconar classe ao body de acordo com a categoria
-function category_id_class($classes) {
-    global $post;
-    foreach((get_the_category($post->ID)) as $single)
-        $classes[] = $single->category_nicename;
-    return $classes;
-}
- 
-add_filter('body_class', 'category_id_class');

@@ -25,14 +25,14 @@ section .video a{
     justify-content: center;
     align-items: center;
     /* position: relative; */
-    background: url(./img/bg-video.jpeg) center no-repeat;
+    background: url(../img/bg-video.jpeg) center no-repeat;
 }
 
 section .video a::before{
     content: "";
     width: 88px;
     height: 88px;
-    background: url(./img/play.png) center no-repeat;
+    background: url(../img/play.png) center no-repeat;
     cursor: pointer;
 
 }
@@ -70,61 +70,9 @@ section .video .botton{
     z-index: 1;
 }
 
-@media only screen and (max-width: 720px){
-    .botton{
-        right:14%;
-    }
-}
-
-@media only screen and (max-width: 640px){
-    .botton{
-        width: 12%;
-        right:15%
-    }
-}
-
 @media only screen and (max-width: 625px) {
     section .video{
         width: 100%;
         /* height: 150px; */
     }
-}
-
-@media only screen and (max-width: 580px){
-    .botton{
-        right: 17%;
-    }
-}
-
-@media only screen and (max-width: 540px){
-    .botton{
-        width: 14%;
-    }
-}
-
-@media only screen and (max-width: 470px){
-    .botton{
-        width:16%;
-        right: 20%;
-    }
-}
-
-@media only screen and (max-width: 427px){
-    .botton{
-        right: 12%;
-    }
-}
-
-@media only screen and (max-width: 400px){
-    .botton{
-        width: 20%;
-        right:14%;
-    }
-}
-
-@media only screen and (max-width: 335px){
-    .botton{
-        width:25%;
-        right: 18%;
-    }
-}
+  }

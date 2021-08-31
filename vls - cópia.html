@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLS</title>
+</head>
+<body>
+    
+    <template>
+        <div class="vslpost">
+            <h1 class="title-adv-advert">ADVERTORIAL</h1>
+            <div class="container container-vsl-post">
+                <div class="box-titulo-vsl">
+                    <h1 class="titulo-vsl-post" v-html="Titulo"></h1>
+                    <span class="subtitulo-vsl-post" v-html="Subtitulo"></span>
+                    <span class="assista-vsl-post" v-html="TextoAssita"></span>
+                </div>
+                <div class="video-vsl-post">
+                    <iframe :src="Video" class="iframe-vsl-post" width="100%" height="520" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+    
+                <a v-if="LinkTexto" class="noticia-texto" :href="link_texto">Vídeo muito longo? Clique aqui para ler a versão em texto</a>
+                <a v-if="btn_aparece" :href="link_btn" :data-linkbtn="LinkBtn" class="btn-vsl-post">Conhecer Método >> </a>
+    
+                <div class="info-empresa">
+                    <div class="card-empresa-vsl-post">
+                        <span >A Everlive é uma empresa brasileira independente, voltada ao mercado editorial na área de saúde natural. Nós publicamos recomendações em saúde natural embasadas em estudos e pesquisas, oferecendo a você um contato estreito com o mundo do tratamento não-convencional, suplementação alimentar saudável, hábitos de vida longínqua e bem-estar. O research é o começo, meio e fim de nossas atividades. As informações contidas nos boletins são publicadas exclusivamente para fins informativos, e não podem ser consideradas como aconselhamento médico pessoal.</span>
+                    </div>
+                </div>
+    
+                <div class="accordeon-vsl-post">
+                    <div class="item-accordeon-vsl-post">
+                        <a class="question-vsl-post" v-on:click="apareceResposta('disclosure')">
+                            <span>Disclosure</span>
+                            <span v-if="!accordeon.disclosure" class="plus-vsl-post">+</span>
+                            <span v-else class="plus-vsl-post">-</span>
+                            </a>
+                        <div v-if="accordeon.disclosure" class="answer-vsl-post">
+                            <span class="resposta-vsl-post">As informações contidas neste boletim são publicadas exclusivamente para fins informativos e não podem ser consideradas como aconselhamento médico pessoal.
+                                <br>O leitor deve, para qualquer questão relativa à sua saúde e bem-estar, consultar um profissional devidamente credenciado pelas autoridades de saúde. O editor deste conteúdo não é médico ou pratica a medicina a qualquer título, ou qualquer outra profissão terapêutica. Apenas expressa sua opinião baseado em dados e fatos apresentados por agentes da saúde, ou conteúdo informativo disponível ao público, considerados confiáveis na data de publicação. Posto que as opiniões nascem de julgamentos e estimativas, estão sujeitas a mudança.
+                                <br>Elaborado por editores independentes da Everlive, os relatórios são de uso exclusivo de seus destinatários. São estritamente proibidos, sem autorização por escrito do detentor dos direitos autorais, sob as penalidades previstas em lei, a comunicação ou a distribuição dos materiais incluídos nestes boletins, bem como a reprodução total ou parcial, por qualquer meio ou processo, incluindo fotocópias e distribuição via computador.</span>
+                        </div>
+                    </div>
+                    <div class="item-accordeon-vsl-post">
+                        <a class="question-vsl-post" v-on:click="apareceResposta('politica')">
+                            <span>Política de Privacidade</span>
+                            <span v-if="!accordeon.politica" class="plus-vsl-post">+</span>
+                            <span v-else class="plus-vsl-post">-</span>
+    
+                        </a>
+                        <div v-if="accordeon.politica" class="answer-vsl-post">
+                            <span class="resposta-vsl-post"><b>POLÍTICA DE USO, PRIVACIDADE E CANCELAMENTO</b>
+                                <br>Leia atentamente os termos e condições de uso antes de utilizar a Everlive.
+    
+                                <br><br>A Everlive é uma empresa destinada à produção, por editores e consultores independentes, e distribuição de conteúdos informativos (researches, relatórios, newsletters e etc.) sobre assuntos relacionados a saúde natural, que são distribuídos periodicamente aos seus clientes, pessoas físicas ou jurídicas, que têm interesse no acesso e utilização dessas informações.
+    
+                                <br><br>Esses produtos são oferecidos ao usuário em diversos formatos (planos de assinaturas, titularidades de clubes, vídeos exclusivos, dentre outros), com prazo de vigência determinado no momento da aquisição, por meio de acesso à plataforma online de venda e acesso desses conteúdos.
+    
+                                <br><br>Em razão disso, adotou-se esse Termo de Uso, Privacidade e Cancelamento aplicável à todas as espécies de produtos disponibilizados pela Everlive aos seus usuários.
+    
+                                <br><br><b>1. CADASTRO</b>
+                                <br><br>Para o uso de algumas das funcionalidades e recursos disponibilizados no site da Everlive será necessário realizar um cadastro prévio, com o fornecimento de informações pessoais do usuário, tais como nome completo, endereço de e-mail, número do CPF, dentre outras, que deverão ser periodicamente atualizadas pelo usuário.
+    
+                                <br><br>O usuário, ao realizar o seu cadastro no site da Everlive, compromete-se a observar rigorosamente as regras de uso, privacidade e cancelamento previstas nesse termo, sendo vedada a transferência de suas informações pessoais de acesso ao seu perfil na Loja Everlive.
+    
+                                <br><br>O usuário cadastrado no site da Everlive poderá a qualquer momento solicitar a exclusão de seu cadastro do site, por simples e-mail enviado para contato@variclear.com.br.
+    
+                                <br><br>Mesmo após a solicitação de exclusão, a Everlive manterá os dados agregados e não identificáveis, para fins estatísticos, bem como os dados e informações que é obrigada a manter em registro por lei.
+    
+                                <br><br>Enquanto estiver em posse de informações ou dados fornecidos pelo usuário, poderá a Everlive fornecê-los às autoridades competentes, mediante ordem judicial expressa, em colaboração com investigações ou procedimentos judiciais, ainda que preparatórios ou cautelares, desde que permitidos por lei.
+    
+                                <br><br><b>2. CONDUTA</b>
+                                <br>O site da Everlive permite a navegação pelo usuário no conteúdo nele disponibilizado, sendo que o site e os recursos nele constantes são destinados ao uso pessoal do usuário.
+    
+                                <br><br>Ao utilizar o site da Everlive, o usuário compromete-se a:
+    
+                                <br>i) não criar ou utilizar mais que uma única forma de identificação para utilizar o website, assim como recebimentos gratuitos e pagos;
+                                <br>ii) não utilizar identificação de um terceiro ou permitir que terceiros utilizem sua identificação;
+                                <br>iii) não utilizar quaisquer elementos do site para fins comerciais, publicitários ou qualquer outro que não represente a finalidade principal do site e sem prévia e expressa anuência da Everlive;
+                                <br>iv) não disfarçar ou ocultar o número de IP (internet protocol) que identifica sua conexão à internet;
+                                <br>v) não interferir na arquitetura do site por qualquer meio ou forma técnica;
+                                <br>vi) não disseminar vírus ou código de computador malicioso, arquivos ou programas desenvolvidos para coletar dados não autorizados, não interromper, destruir ou limitar a funcionalidade do site.
+    
+                                <br><br>A Everlive, por outro lado, compromete-se a não utilizar de forma indevida, sob nenhuma hipótese, as informações pessoais fornecidas pelo usuário.
+    
+                                <br><br><b>3. CONTEÚDOS E PROPRIEDADE INTELECTUAL</b>
+                                <br>As informações publicadas pela Everlive, tanto nos conteúdos distribuídos gratuitamente ao público em geral como nos conteúdos pagos, são baseados em informações de domínio público, ou seja, disponíveis a qualquer pessoa, e são consideradas confiáveis na data de sua publicação, tendo em vista que as opiniões expostas nos conteúdos são oriundas de julgamentos e estimativas dos editores e consultores da Everlive.
+    
+                                <br><br>Os conteúdos disponibilizados pela Everlive em seu site, e por e-mail aos usuários cadastrados em seu banco de dados, são elaborados por editores e consultores independentes, em conteúdos pagos, vedada sua reprodução e distribuição, no todo ou em parte, a qualquer terceiro, sem prévia e expressa autorização da Everlive.
+    
+                                <br><br>Esses conteúdos são oferecidos aos clientes da Everlive em diversos formatos (planos de assinaturas, titularidades de clubes, vídeos exclusivos, dentre outros) com prazo de vigência determinado no momento da aquisição.
+    
+                                <br><br>As informações contidas nos boletins são publicadas exclusivamente para fins informativos, e não podem ser consideradas como aconselhamento médico pessoal.
+    
+                                <br><br>O leitor deve, para qualquer questão relativa à sua saúde e bem-estar, consultar um profissional devidamente credenciado pelas autoridades de saúde.
+    
+                                <br><br>Os editores dos conteúdos não são médicos ou praticam a medicina a qualquer título, ou qualquer outra profissão terapêutica. Apenas expressam sua opinião, baseados em dados e fatos apresentados por agentes da saúde, ou conteúdo informativo disponível ao público, considerados confiáveis na data de publicação.
+    
+                                <br><br>Posto que as opiniões nascem de julgamentos e estimativas, estão sujeitas a mudança.
+    
+                                <br><br><b>4. VENDA DE CONTEÚDOS</b>
+                                <br>A Everlive é a plataforma online pela qual a Everlive vende os conteúdos informativos, disponibilizados em formatos diversos, dentro do ambiente da loja (no perfil cadastrado no site), com recomendações sobre saúde natural, dentre outros assuntos relevantes, disponibilizados no ambiente da Loja Everlive, cujo acesso é feito pelo e-mail e senha cadastrados pelo usuário.
+    
+                                <br><br>Ao adquirir um dos produtos comercializados pela Everlive em sua loja virtual, o usuário terá imediato acesso aos demais conteúdos relacionados da série por ele assinada, bem como poderá acessar os próximos conteúdos informativos da série, disponibilizados de acordo com a periodicidade dos conteúdos, atendendo-se ao prazo de vigência da assinatura.
+    
+                                <br><br>Os preços dos produtos comercializados pela Everlive estão indicados na loja virtual da Everlive, no próprio link de acesso de divulgação do produto, cujo pagamento será de acordo com a modalidade escolhida pelo usuário no momento da compra.
+    
+                                <br><br>A Everlive não realiza a venda de consultas particulares, ou medicamentos para tratamentos de enfermidades.
+    
+                                <br><br>Ao contratar um plano de assinatura, a nota fiscal será emitida pela Everlive após o término do período experimental do plano, podendo o prazo da emissão variar entre 30 e 45 dias conforme a contratação, se por pessoa física ou jurídica.
+    
+                                <br><br>O usuário pode tirar eventuais dúvidas sobre o conteúdo dos relatórios por ele adquiridos por e-mail enviado para contato@variclear.com.br.
+    
+                                <br><br><b>5. POLÍTICA DE CANCELAMENTO</b>
+                                <br>Os planos de assinatura oferecidos pela Everlive são anuais, bianuais ou vitalícios, e estão sujeitos às seguintes regras de cancelamento:
+    
+                                <br><br>a) Os cancelamentos de assinaturas deverão ser solicitados somente por e-mail para contato@variclear.com.br;
+    
+                                <br><br>b) Para cancelamentos requeridos no prazo de trinta dias da data da aquisição do produto, a Everlive reembolsará integralmente o valor pago pelo cliente, sendo esse período considerado o período experimental de qualquer produto comercializado pela Everlive. O reembolso integral pela Everlive do valor pago pelo cliente será realizado de acordo com a forma de pagamento escolhida pelo cliente no momento da compra, obedecendo-se as seguintes condições: i) débito em conta corrente ou boleto bancário: o reembolso integral do valor pago pelo cliente, tanto por boleto bancário como por débito em conta corrente, se dará por depósito em conta bancária indicada pelo cliente; ii) cartão de crédito: a Everlive encaminhará à operadora do cartão de crédito do cliente um pedido de cancelamento de compra com requerimento de estorno ao cliente de eventuais valores cobrados, na forma do item seguinte.
+    
+                                <br><br>c) No caso de cancelamento de compras feitas via cartão de crédito, o estorno é solicitado pela Everlive para a administradora em até 7 dias úteis, gerando um comprovante que pode ser encaminhado para o cliente mediante solicitação por e-mail. O estorno, ou seja, o lançamento a crédito do valor pago na fatura seguinte, tem prazo estimado de 30 dias corridos para acontecer, dependendo do fechamento da fatura do cartão de crédito do cliente, não se responsabilizando a Everlive por outros prazos estabelecidos pela operadora de cartão de crédito. A responsabilidade da Everlive no processo de devolução em compras feitas com o cartão de crédito limita-se a solicitar da administradora o estorno, sendo desta o dever de efetivamente realizar o crédito em favor do cliente na fatura do seu cartão de crédito.
+    
+                                <br><br>Nos planos vitalícios, não há cobrança automática da assinatura após o término do período vigente.
+    
+                                <br><br>Todas as assinaturas, anuais ou bianuais, terão cobranças automáticas se não houver expressa manifestação do cliente antes da data do vencimento do plano, por e-mail enviado para contato@variclear.com.br.
+    
+                                <br><br>Os pedidos de cancelamento e estorno são limitados a três, por cliente, a cada período de doze meses.
+    
+                                <br><br>Ao optar pelo cancelamento, o cliente perderá o acesso aos relatórios do período e ao acervo disponibilizado no momento da contratação da assinatura, devido a não cumprimento total do período contratado.
+    
+                                <br><br>O cancelamento da assinatura requerido depois de 30 dias da contratação não dará direito ao reembolso do que foi pago.
+    
+                                <br><br>Além das disposições contidas neste termo de uso, privacidade e cancelamento, o cliente declara ter pleno conhecimento sobre o Compromisso Público Everlive, registrado no 4º Registro de Títulos e Documentos e Civil de Pessoa Jurídica de São Paulo.
+    
+                                <br><br><b>6. DISPOSIÇÕES FINAIS</b>
+                                <br>Ao aceitar este Termo de Uso, o usuário/cliente concorda com todas as suas disposições, comprometendo-se a respeitá-las e não agir contrariamente a elas, por si e seus sucessores a qualquer título, de modo irretratável e irrevogável.
+    
+                                <br><br>Caso o termo de uso aqui previsto seja desrespeitado pelo usuário, a Everlive poderá interromper, a seu exclusivo critério, o acesso do usuário ao seu site, impossibilitando-o de realizar compras e acessar os conteúdos nele disponibilizados, bem como poderá cancelar compras já realizadas e ajuizar ações que forem necessárias. Sem prejuízo, na hipótese de descumprimento das obrigações previstas neste termo pelo usuário/cliente, poderá a Everlive considerar rescindido o plano de assinatura contratado, sem direito a reembolso ao cliente.
+    
+                                <br><br>A Everlive se reserva ao direito de alterar a qualquer tempo estes termos e condições de uso que, se alterados, passam a ser válidos imediatamente após o momento de sua publicação neste site, e garante o respeito ao ato jurídico perfeito.</span>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    </template>
+    
+    <script>
+        export default{
+            name: 'VSLPost',
+            props:['Titulo', 'Subtitulo', 'TextoAssita', 'Video', 'LinkTexto', 'TextoBotao', 'LinkBtn'],
+            data:() => ({
+                btn_aparece : false ,
+                link_btn: '',
+                link_texto:'',
+                accordeon:{
+                    disclosure: false,
+                    politica: false,
+                },
+                parametros: '',
+                query: '?',
+                count_query: 1,
+            }),
+            
+            mounted(){
+                setTimeout(this.apareceBotao, 75*1000);
+    
+                for( var parametro in this.$route.query){
+                    if(Object.keys(this.$route.query).length === 1 || this.count_query === 1) {
+                        this.query = this.query + parametro + '=' + this.$route.query[parametro];
+                        this.count_query++;
+                    }
+                    else {
+                        if(this.count_query <= Object.keys(this.$route.query).length){
+                            this.query = this.query + '&' + parametro + '=' + this.$route.query[parametro] ;
+                            this.count_query++;
+                        }
+                    }
+                }
+                if(Object.keys(this.$route.query).length === 0){
+                    this.query = ''
+                }
+    
+                this.link_texto = this.LinkTexto + this.query;
+                this.link_btn = this.LinkBtn + this.query;
+            },
+            methods:{
+                apareceBotao(){
+                    this.btn_aparece = true;
+                },
+                apareceResposta(q){
+                    if(q === 'disclosure')
+                        this.accordeon.disclosure = !this.accordeon.disclosure;
+    
+                    if(q === 'politica')
+                        this.accordeon.politica = !this.accordeon.politica;
+                }
+            }
+        }
+    </script>
+    
+    <style lang="scss" scoped>
+        @import "../../../assets/css/global.css";
+    
+        .vslpost{
+            padding: 50px 0;
+            background: transparent url('/static/img/fundo-vsl-reduzido.png') 0 0 repeat;
+            background-position: center;
+            font-family: 'Roboto', sans-serif;
+        }
+    
+        .container-vsl-post{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .box-titulo-vsl{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        .titulo-vsl-post{
+            color: #9d736f;
+            font-size: 32px;
+            font-style: italic;
+        }
+    
+        .subtitulo-vsl-post{
+            text-transform: uppercase;
+            color: #822e27;
+            font-size: 38px;
+            font-weight: bolder;
+        }
+    
+        .texto-vsl-post{
+            color: #9d736f;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    
+        .assista-vsl-post{
+            color: #9d736f;
+            font-size: 24px;
+            font-weight: bolder;
+        }
+    
+        .card-empresa-vsl-post{
+            background-color: #ffffff;
+            padding: 15px 20px;
+            font-size: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .video-vsl-post{
+            width: 100%;
+            margin: 20px 0 40px 0;
+        }
+    
+        .btn-vsl-post {
+            color: #000000;
+            font-size: 26px;
+            font-weight: 500;
+            text-align: center;
+            border-radius: 31px;
+            background-color: #54dc3e;
+            padding: 20px 80px;
+            text-decoration: none;
+            margin-bottom: 30px;
+            animation: zoominout 3s infinite;
+        }
+    
+        .title-adv-advert{
+            font-size:23px;
+            color:#000000;
+            text-align: center;
+        }
+    
+        @keyframes zoominout {
+    
+            0% {
+                transform: scale(1.0);
+            }
+    
+            15% {
+                transform: scale(1.1);
+            }
+    
+            30% {
+                transform: scale(1.0);
+            }
+    
+            45% {
+                transform: scale(1.1);
+            }
+    
+            100% {
+                transform: scale(1.0);
+            }
+    
+        }
+    
+        .question-vsl-post{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px 15px;
+            background-color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+    
+            &:hover{
+              color: #999;
+            }
+        }
+    
+        .answer-vsl-post{
+            padding: 10px 15px;
+            background-color: #ffffff;
+            font-size: 12px;
+            text-align: center;
+        }
+    
+        .accordeon-vsl-post{
+            width: 100%;
+        }
+    
+        .item-accordeon-vsl-post{
+            margin-bottom: 15px;
+            width: 100%;
+        }
+    
+        .noticia-texto{
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+    
+    
+        @media (max-width: 1000px){
+            .iframe-vsl-post{
+                height: 355px;
+            }
+        }
+    
+        @media (max-width: 750px){
+            .iframe-vsl-post{
+                height: 255px;
+            }
+        }
+    
+        @media (max-width: 500px){
+            .iframe-vsl-post{
+                height: 200px;
+            }
+    
+            .titulo-vsl-post{
+                font-size: 28px;
+            }
+    
+            .subtitulo-vsl-post{
+                font-size: 34px;
+            }
+    
+            .texto-vsl-post{
+                font-size: 26px;
+            }
+    
+            .assista-vsl-post{
+                font-size: 20px;
+            }
+    
+            .btn-vsl-post {
+                font-size: 22px;
+                padding: 15px 50px;
+            }
+        }
+    
+    
+    
+    </style>
+    
+
+</body>
+</html>
+
+<?php
+// Adiconar classe ao body de acordo com a categoria
+function category_id_class($classes) {
+    global $post;
+    foreach((get_the_category($post->ID)) as $single)
+        $classes[] = $single->category_nicename;
+    return $classes;
+}
+ 
+add_filter('body_class', 'category_id_class');
