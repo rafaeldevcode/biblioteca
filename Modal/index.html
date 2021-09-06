@@ -8,8 +8,9 @@
     <title>Modal</title>
 </head>
 <body>
+    <button class="btn" id="btn-oppen">Acionar Modal</button>
 
-    <div class="modal">
+    <section class="modal">
         <div class="modalex">
             <div class="clossed">
                 <button class="btnClossed"></button>
@@ -37,7 +38,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <script src="./js/bounceback.js"></script>
     <script>
@@ -51,9 +52,15 @@
 
         })
 
+        document.getElementById("btn-oppen").addEventListener("click", ()=>{
+            document.querySelector(".modal").style.display = "flex";
+            document.querySelector(".modal").classList.remove("clossed-modal");
+            clossedModal();
+        });
+
         function clossedModal(){
             document.querySelector(".btnClossed").addEventListener("click", ()=>{
-                document.querySelector(".modal").classList = "modal clossed-modal";
+                document.querySelector(".modal").classList.add("clossed-modal");
             })
         }
     </script>
