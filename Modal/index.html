@@ -40,29 +40,21 @@
         </div>
     </section>
 
-    <script src="./js/bounceback.js"></script>
     <script>
-
-        Bounceback.init(options = {method:"auto"})
-            Bounceback.init({
-            onBounce: function() {
-                document.querySelector(".modal").style.display = "flex";
-                clossedModal();
-            }
-
+        document.getElementsByClassName("btn")[0].addEventListener("click", ()=>{
+            document.getElementsByClassName("modal")[0].classList.add("animation-modal");
         })
 
-        document.getElementById("btn-oppen").addEventListener("click", ()=>{
-            document.querySelector(".modal").style.display = "flex";
-            document.querySelector(".modal").classList.remove("clossed-modal");
-            clossedModal();
-        });
+        history.pushState({},"",location.href);
+        history.pushState({},"",location.href);
+        window.onpopstate = ()=>{
+            document.getElementsByClassName("modal")[0].classList.add("animation-modal");
+        };
 
-        function clossedModal(){
-            document.querySelector(".btnClossed").addEventListener("click", ()=>{
-                document.querySelector(".modal").classList.add("clossed-modal");
-            })
-        }
+        document.getElementsByClassName("btnClossed")[0].addEventListener("click", ()=>{
+            document.getElementsByClassName("modal")[0].classList.remove("animation-modal");
+            window.history.pushState({}, 'back',  '');
+        })
     </script>
 </body>
 </html>

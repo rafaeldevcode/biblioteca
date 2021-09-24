@@ -1,7 +1,13 @@
+@font-face {
+    font-family: Anton;
+    src: url(../fonts/Anton-Regular.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: Anton;
 }
 body, html{
     width: 100%;
@@ -39,8 +45,9 @@ body, html{
     height: 100%;
     z-index: 3;
 }
-.clossed-modal{
-    animation: clossed-modal 0.5s ease-out forwards;
+.animation-modal{
+    display: flex !important;
+    animation: animation-modal 0.5s ease-out forwards;
 }
 .modal .modalex {
     width: 100%;
@@ -161,40 +168,6 @@ body, html{
     font-size: 2em;
     animation: pulse .6s ease-out infinite ;
 }
-@-webkit-keyframes popin {
-    0% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        opacity: 0;
-    }
-    85% {
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-@-ms-keyframes popin {
-    0% {
-        -ms-transform: scale(0);
-        transform: scale(0);
-        opacity: 0;
-    }
-    85% {
-        -ms-transform: scale(1.05);
-        transform: scale(1.05);
-        opacity: 1;
-    }
-    100% {
-        -ms-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 @keyframes popin {
     0% {
         -webkit-transform: scale(0);
@@ -229,20 +202,16 @@ body, html{
       opacity: 0.9;
   }
 }
-@keyframes clossed-modal{
+@keyframes animation-modal{
     0%{
-        transform: scale(1.05);
-        display: flex;
+        transform: scale(0);
     }
     50%{
         transform: scale(1);
-        display: none !important;
-        background-color: rgba(255, 255, 255, 0);
     }
     100%{
-        transform: scale(0);
-        display: none !important;
-        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.05);
+        background-color: rgba(0, 0, 0, .8);
     }
 }
 @media only screen and (max-width: 573px){
