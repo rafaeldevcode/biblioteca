@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Table - Price</title>
+</head>
+<body>
+
+    <div class="componente-table-price table-price-variclear padding-posicao-fixa">
+        <div class="container">
+            <h3 class="titulo-table-price mb-2">Confira os kits Variclear</h3>
+            <span class="subtitulo-table-price">Unidades a pronta entrega</span>
+            <div class="box-table-prices" id="for-table-price">
+                <!-- table price -->
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./scripts/jq-jquery.js"></script>
+    <script type="text/javascript" src="./scripts/div-picturefill.min.js"></script>
+    <script type="text/javascript" src="./scripts/jq-slick.min.js"></script>
+    <script type="text/javascript" src="./scripts/div-underscore-min.js"></script>
+
+    <script type="text/javascript">
+        // Scroll table price
+        $("[href='#table-price']").on("click", function(event) {
+            event.preventDefault();
+            var id = this.getAttribute('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({ scrollTop: top }, 2000);
+        });
+    </script>
+
+    <script type="text/template" id="tpl-html">
+        <% _.each( target, function(i) {%>
+            <div class="table-price">
+                <div class="box-octorating" style="<%= i.id === 2 ? 'margin-bottom:45px;' : '' %>">
+                    <span style="color: #4a4a4a; font-size: 12px;">Unidades vendidas: <%= i.unidade_vendidas %></span>
+                    <div class="avaliacao">
+                        <i class="material-icons icone-estrela estrela-laranja">star</i>
+                        <i class="material-icons icone-estrela estrela-laranja">star</i>
+                        <i class="material-icons icone-estrela estrela-laranja">star</i>
+                        <i class="material-icons icone-estrela estrela-laranja">star</i>
+                        <i class="material-icons icone-estrela <%= i.estrela_laranja ? 'estrela-laranja' : '' %>">star</i>
+                    </div>
+                    <span class="reviews"><%= i.avaliacoes %> avaliações</span>
+                </div>
+                <div class="box-produto tamanho-box" >
+                    <div class="economize-frete">
+                        <span class="economize radius-esquerda <%= i.id === 2 ? 'fundo-laranja' : 'fundo-verde-escuro' %>">Economize</span>
+                        <span class="economize radius-direita frete-gratis <%= i.id === 2 ? 'fundo-amarelo' : 'fundo-verde-claro' %>">Frete Grátis</span>
+                    </div>
+                    <span id="table-price" class="tipo-kit"><%= i.tipo_kit %></span>
+                    <h4   class="nome-kit"><%= i.nome_kit %></h4>
+                    <img  src="<%= i.imagem %>">
+                    <div class="box-infos-table-price">
+                        <% _.each( i.infos_kit, function(info) {%>
+                            <div class="info-table-price">
+                                <i class="material-icons icones-infos"><%= info.icon %></i>
+                                <span class="span-info"><%= info.descricao %></span>
+                            </div>
+                        <% }); %>
+                    </div>
+                    <div class="box-valores">
+                        <span class="preco-antes">de <span style=" text-decoration: line-through;">R$<%= i.preco_antes %></span> por 12x de</span>
+                        <div class="box-preco">
+                            <span class="rs">R$</span>
+                            <span class="preco-cheio"><%= i.preco_cheio %>,</span>
+                            <span class="centavos"><%= i.preco_centavos %></span>
+                        </div>
+                        <span class="preco-a-vista">ou R$<%= i.preco_a_vista %> à vista</span>
+                        <a href="<%= i.link_comprar %>" id="kit-<%= i.id %>"  target="_blank" class="botao-table-price-site-antigo link_comprar_query">COMPRAR AGORA</a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </script>
+
+    <script type="text/javascript" src="./scripts/main.js"></script>
+</body>
+</html>
