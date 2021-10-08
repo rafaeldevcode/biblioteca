@@ -2,10 +2,10 @@
 ## Empurrar todas as branchs
 
 git clone --mirror https://bitbucket.org/exampleuser/repository-to-mirror.git
-# Make a bare mirrored clone of the repository
+# Faça um clone espelhado do repositório
 
 cd repository-to-mirror.git
 git remote set-url --push origin https://github.com/exampleuser/mirrored
-# Set the push location to your mirror
+# Defina o local de envio para o seu espelho
 
 git push --mirror
