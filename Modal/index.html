@@ -10,7 +10,7 @@
 <body>
     <button class="btn" id="btn-oppen">Acionar Modal</button>
 
-    <section class="modal">
+    <section class="modal" hidden>
         <div class="modalex">
             <div class="clossed">
                 <button class="btnClossed"></button>
@@ -40,21 +40,6 @@
         </div>
     </section>
 
-    <script>
-        document.getElementsByClassName("btn")[0].addEventListener("click", ()=>{
-            document.getElementsByClassName("modal")[0].classList.add("animation-modal");
-        })
-
-        history.pushState({},"",location.href);
-        history.pushState({},"",location.href);
-        window.onpopstate = ()=>{
-            document.getElementsByClassName("modal")[0].classList.add("animation-modal");
-        };
-
-        document.getElementsByClassName("btnClossed")[0].addEventListener("click", ()=>{
-            document.getElementsByClassName("modal")[0].classList.remove("animation-modal");
-            window.history.pushState({}, 'back',  '');
-        })
-    </script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>

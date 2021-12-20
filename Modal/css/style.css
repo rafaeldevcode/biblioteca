@@ -36,18 +36,12 @@ body, html{
 .modal {
     font-family: sans-serif;
     box-sizing: border-box;
-    display: none;
     position: fixed;
-    background-color: rgba(71, 71, 71, 0.377);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 3;
-}
-.animation-modal{
-    display: flex !important;
-    animation: animation-modal 0.5s ease-out forwards;
 }
 .modal .modalex {
     width: 100%;
@@ -62,8 +56,6 @@ body, html{
     left: 0;
     box-shadow: 0px 0px 10px rgba(56, 56, 56, 0.63);
     border-radius: 4px;
-    -webkit-animation: popin 0.3s;
-    animation: popin 0.3s;
 }
 .modal .modalex .clossed{
     width: 25px;
@@ -168,25 +160,11 @@ body, html{
     font-size: 2em;
     animation: pulse .6s ease-out infinite ;
 }
-@keyframes popin {
-    0% {
-        -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-        transform: scale(0);
-        opacity: 0;
-    }
-    85% {
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
+.abrir-modal{
+    animation: abrir-modal .8s linear forwards;
+}
+.fechar-modal{
+    animation: fechar-modal .8s linear forwards;
 }
 @keyframes pulse{
     0% {
@@ -202,16 +180,35 @@ body, html{
       opacity: 0.9;
   }
 }
-@keyframes animation-modal{
+@keyframes abrir-modal {
     0%{
         transform: scale(0);
     }
-    50%{
+    33%{
+        transform: scale(1);
+    }
+    66%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+        background: rgba(0, 0, 0, 0.514);
+    }
+}
+
+@keyframes fechar-modal {
+    0%{
+        transform: scale(1);
+        background: rgba(0, 0, 0, 0.514);
+    }
+    33%{
+        transform: scale(1.05);
+    }
+    66%{
         transform: scale(1);
     }
     100%{
-        transform: scale(1.05);
-        background-color: rgba(0, 0, 0, .8);
+        transform: scale(0);
     }
 }
 @media only screen and (max-width: 573px){
