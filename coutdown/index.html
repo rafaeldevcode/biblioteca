@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Coutdown</title>
+</head>
+<body>
+    <section class="coutdown">
+        <div class="head-coutdown">
+            <p>Todo o site com uma super promoção, mas por tempo limitado, APROVEITE!</p>
+        </div>
+
+        <div class="body-coundown">
+            <p>PROMOÇÃO EXPIRA EM:</p>
+
+            <div class="contagem" id="coutdowm">
+                <div>
+                    <p id="dia">00</p>
+                    <span>Dias</span>
+                </div>
+
+                <div>
+                    <p id="hora">00</p>
+                    <span>horas</span>
+                </div>
+
+                <div>
+                    <p id="minuto">00</p>
+                    <span>Minutos</span>
+                </div>
+
+                <div>
+                    <p id="segundo">00</p>
+                    <span>Segundos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="inputs">
+        <div>
+            <label for="data">Data da expiração</label>
+            <input name="data" id="data" type="date">
+        </div>
+
+        <div>
+            <label for="time">Hora da expiração</label>
+            <input name="time" id="time" type="time">
+        </div>
+
+        <div>
+            <button class="btn" id="btn">Ok</button>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
