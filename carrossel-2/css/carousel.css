@@ -18,7 +18,7 @@
 .opniao-usou .op_faixa .op_header .h2-title {
     font-size: 37px;
     font-family: sans-serif;
-    color: #b90089;
+    color: #202020;
     line-height: 1.5em;
     text-align: center;
     margin: 0;
@@ -75,8 +75,8 @@
     height: 655px;
 }
 .opniao-usou .content-slider .sliders-opniao-uso .slider .op_box-img:hover {
-    border: 1px solid #b9008860;
-    background: #b9008811;
+    border: 1px solid #20202060;
+    background: #20202011;
 }
 .opniao-usou .content-slider .sliders-opniao-uso .slider .op_box-img .box-title {
     width: 100%;
@@ -94,7 +94,7 @@
 .opniao-usou .content-slider .sliders-opniao-uso .slider .op_box-img .box-title .box-title-name {
     margin-left: 10px;
     font-weight: 600;
-    color: #b90089;
+    color: #202020;
 }
 .opniao-usou .content-slider .sliders-opniao-uso .slider .op_box-img .desc-feed {
     margin-bottom: 0;
@@ -118,7 +118,7 @@
     text-align: center;
     margin-left: 10px;
     font-weight: 800;
-    color: #b90089;
+    color: #202020;
 }
 .opniao-usou .content-slider .sliders-opniao-uso .slider .op_box-img .slick-track {
     width: 100% !important;
@@ -135,7 +135,7 @@
 }
 .opniao-usou .content-slider .sliders-opniao-uso .slick-dots li button:before {
     font-size: 25px;
-    color: #b90089;
+    color: #202020;
 }
 .opniao-usou .content-slider .sliders-opniao-uso .slick-dots li {
     margin: 0 10px;

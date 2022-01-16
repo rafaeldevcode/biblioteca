@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 *{
     margin: 0;
     padding: 0;
@@ -31,6 +33,11 @@ html, body{
     box-shadow: 0px 1px 2px rgb(143, 143, 143);
     margin-bottom: 20px;
     box-sizing: border-box;
+    transition: transform .4s linear;
+}
+
+.content .anuncio:hover{
+    transform: scale(1.05);
 }
 
 .content .anuncio div{
