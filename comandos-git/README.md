@@ -56,3 +56,13 @@ git log
 git reset --hard 3584df991c2d7b3c4457667ef68e69851bf31a47
 
 ---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+# Desconectar o repositório remoto
+
+## Apenas desconectar
+git remote remove origin
+
+## Selecionar outro repositório remoto
+git remote set-url origin git://new.url.here
