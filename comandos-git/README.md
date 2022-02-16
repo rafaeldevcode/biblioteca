@@ -105,3 +105,7 @@ ssh-add ~/.ssh/nomeDaSuaChavePrivada
 ### Identity added: /Users/convidado/.ssh/
 
 ---------------------------------------------------------------------------------
+
+# Remover arquivos do rastreio do git
+
+git rm --cached NOME_DO_ARQUIVO
