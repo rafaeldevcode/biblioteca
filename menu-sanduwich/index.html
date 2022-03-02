@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./css//style.css">
+    <meta name="author" content="Rafael Vieira - github.com/rafaeldevcode">
+    <title>Mene Sanduwich</title>
+</head>
+<body>
+
+    <header class="header">
+        <span class="logo">
+            <h1>LOGO</h1>
+        </span>
+
+        <div class="mobile-menu">
+            <input class="input-menu" type="checkbox" id="checkbox-menu">
+        
+            <label class="menu-label" for="checkbox-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </header>
+
+    <main class="content">
+        <aside class="menu-aside">
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a title="Sair" href="#">Adicionar Conta</a>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Relatórios</summary>
+                            <ul>
+                                <li>
+                                    <a title="Relatório por mês" href="#">Mensal</a>
+                                </li>
+                                <li>
+                                    <a title="Relatório Geral" href="#">Geral</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <a title="Sair" href="#">Sair</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </main>
+    
+    <script type="text/javascript" src="./js/main.js"></script>
+
+    <script type="text/javascript">
+        oppenMenu();
+    </script>
+</body>
+</html>
