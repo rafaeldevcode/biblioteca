@@ -32,6 +32,9 @@ git branch -d nome_do_branch
 #### Já a opção -D  (–delete –force) vai remover a branch local independentemente de você ter feito os processos de push ou de merge com o branch remoto.
 git branch -D nome_do_branch
 
+### Deletar somente a branch remota
+git branch -dr origin/login 
+
 #### Você também pode remover um branch remoto ao especificar os nomes tanto do branch remoto quanto do local. Na maioria dos casos, o nome remoto é a origem, e o comando ficará assim:
 
 git push nome_remoto --delete nome_do_branch
