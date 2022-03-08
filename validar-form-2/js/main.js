@@ -1,12 +1,14 @@
-let fields = document.querySelectorAll('[required]');
+function getFields(){
+    let fields = document.querySelectorAll('[required]');
 
-for(let field of fields){
-    field.addEventListener('invalid', event => {
-        // Eliminar bubble
-        event.preventDefault();
-        customValidation(event)
-    });
-    field.addEventListener('blur', customValidation);
+    for(let field of fields){
+        field.addEventListener('invalid', event => {
+            // Eliminar bubble
+            event.preventDefault();
+            customValidation(event)
+        });
+        field.addEventListener('blur', customValidation);
+    }
 }
 
 function validateField(field){

@@ -1,9 +1,10 @@
 // Alterar o texto do bubble
+function getFields(){
+    let fields = document.querySelectorAll('[required]');
 
-let fields = document.querySelectorAll('[required]');
-
-for(let field of fields){
-    field.addEventListener('invalid', customValidation);
+    for(let field of fields){
+        field.addEventListener('invalid', customValidation);
+    }
 }
 
 function customValidation(event){
