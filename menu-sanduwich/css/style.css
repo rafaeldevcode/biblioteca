@@ -10,7 +10,7 @@
 }
 
 :root{
-    --color-main: #FFF;
+    --color-secondary: #FFF;
 }
 
 body,
@@ -27,7 +27,7 @@ html{
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    color: var(--color-main);
+    color: var(--color-secondary);
     background: #000;
 
 }
@@ -59,7 +59,7 @@ html{
     height: 3px;
     width: 100%;
     border-radius: 30px;
-    background: var(--color-main);
+    background: var(--color-secondary);
     transition: 0.25s ease-in-out;
 }
 
@@ -104,10 +104,12 @@ html{
 
 .nav ul li{
     margin: 10px 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .nav ul li i{
-    color: var(--color-main);
+    color: var(--color-secondary);
     font-weight: 700;
     margin-right: 5px;
 }
@@ -116,7 +118,7 @@ html{
 .nav ul li summary{
     cursor: pointer;
     font-size: 1.1em;
-    color: var(--color-main);
+    color: var(--color-secondary);
     font-weight: 700;
 }
 
@@ -131,7 +133,7 @@ html{
 .nav ul li summary::before{
     content: '';
     position: absolute;
-    right: 0px;
+    right: -20px;
     bottom: 50%;
 
     display: inline-block;
@@ -141,7 +143,7 @@ html{
   
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 6px solid var(--color-main);
+    border-top: 6px solid var(--color-secondary);
 }
 
 /* ///////// KEYFRAME //////// */
