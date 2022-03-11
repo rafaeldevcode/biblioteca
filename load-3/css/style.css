@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+:root{
+    --cor-principal: #31ADED;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+/* ///// LOADING REDIRECT ///// */
+.loading-redirect{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    z-index: 2;
+    padding: 10px;
+}
+
+.body-loading{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-loading p{
+    color: var(--cor-principal);
+    font-weight: bolder;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.body-loading .loading{
+    display: flex;
+    flex-direction: row;
+}
+
+.body-loading .loading-1{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--cor-principal);
+    opacity: 0;
+    margin: 0 4px;
+
+    animation: loading .5s linear infinite;
+    animation-delay: .0s;
+}
+
+.body-loading .loading-2{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--cor-principal);
+    opacity: 0;
+    margin: 1px;
+
+    animation: loading .5s linear infinite;
+    animation-delay: .8s;
+}
+
+.body-loading .loading-3{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--cor-principal);
+    opacity: 0;
+    margin: 1px;
+
+    animation: loading .5s linear infinite;
+    animation-delay: .13s;
+}
+
+.loading-progess{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgb(99, 99, 99);
+}
+
+.loading-progess::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 8px;
+    background: var(--cor-principal);
+    animation: loading-progess 3s ease-in-out forwards;
+}
+
+.opacity-progress{
+    animation: opacity-progress .4s linear forwards;
+}
+
+@keyframes loading {
+    0%{
+        opacity: 0;
+        transform: translateX(-5px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes loading-progess{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes opacity-progress{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
