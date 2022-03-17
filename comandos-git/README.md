@@ -112,3 +112,14 @@ ssh-add ~/.ssh/nomeDaSuaChavePrivada
 # Remover arquivos do rastreio do git
 
 git rm --cached NOME_DO_ARQUIVO
+
+---------------------------------------------------------------------------------
+# Baixar projeto com todas as ramificações
+
+git clone seu_repositorio
+git fetch origin
+
+## Este comando deve ser executado pra cada branch que vc irá usar
+git checkout --track origin/sua_ramificação
+
+---------------------------------------------------------------------------------
