@@ -37,8 +37,15 @@ git branch -dr origin/login
 
 #### Você também pode remover um branch remoto ao especificar os nomes tanto do branch remoto quanto do local. Na maioria dos casos, o nome remoto é a origem, e o comando ficará assim:
 
-git push nome_remoto --delete nome_do_branch
-git push nome_remoto :nome_do_branch
+git push origin --delete nome_do_branch
+git push origin :nome_do_branch
+
+### Caso aparecer algum erro desse tipo:
+error: unable to push to unqualified destination: remoteBranchName The destination refspec neither matches an existing ref on the remote nor begins with refs/, and we are unable to guess a prefix based on the source ref. error: failed to push some
+
+#### Use este comando para sincrinizar suas listas de branchs
+
+git fetch -p
 
 ---------------------------------------------------------------------------------
 # Voltar a um commit específico
