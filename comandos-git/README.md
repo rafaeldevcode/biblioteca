@@ -118,7 +118,7 @@ ssh-add ~/.ssh/nomeDaSuaChavePrivada
 
 # Remover arquivos do rastreio do git
 
-git rm --cached NOME_DO_ARQUIVO
+git rm -r --cached NOME_DO_ARQUIVO
 
 ---------------------------------------------------------------------------------
 # Baixar projeto com todas as ramificações
