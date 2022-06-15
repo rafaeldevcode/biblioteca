@@ -1,0 +1,34 @@
+body,
+html {
+    overflow-y: hidden !important;
+    width: 100vw;
+    height: 100vh;
+}
+body.canScroll {
+    overflow-y: initial !important;
+}
+#preloader{
+    width: 100vw; 
+    height: 100vh; 
+    position: fixed; 
+    z-index: 99999; 
+    top: 0px; 
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gif{
+    width: 50px;
+    height: 5px;
+}
+.gif img{
+    width: 100%;
+}
+#preloader p{
+    font-family: sans-serif;
+    color: #23a556;
+    font-weight: bolder;
+    margin-top: 50px;
+}
