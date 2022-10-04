@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cloudways PHP Hosting</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+    (function(){
+        const urls = {
+            facebook: "https://c.adsco.re/r#apikey=Qt3RAAAAAAAA_OtC6f-wPZqd9WAQmMwlkVjNdKE&type=2&data=",
+            taboola: "https://c.adsco.re/r#apikey=QubRAAAAAAAA_dFy1zeJZdweCrjGWax-syGbFhI&type=2&data=",
+            propeller: "https://c.adsco.re/r#apikey=Qu_RAAAAAAAAO_5Uz1sw0KQRkHm1sBs2FWdMoXo&type=2&data="
+        }
+
+        const querys = window.location.search;
+        let url = new URLSearchParams(querys).get('url');
+            url = url ? url : '';
+
+        let source = new URLSearchParams(querys).get('utm_source');
+            source = source ? source : '';
+
+        const newQuerys = url !== '' ? querys.replace(`url=${url}&`, '') : querys;
+
+            urlFinal = `https://formoney.com.br/${url}${newQuerys}`;
+
+            window.location.href = source !== '' ? urls[source]+urlFinal : urlFinal;
+    })()
+</script>
+</body>
+</html>

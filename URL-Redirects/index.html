@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cloudways PHP Hosting</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+    (function(){
+        const campaign_construct = {
+            s: 'sms1',
+            c: 'car',
+            e: 'emp',
+            f: 'fac',
+            t: 'tik',
+            g: 'gol'
+        }
+
+        const trafic_font = {
+            fac: 'facebook',
+            tik: 'tiktok',
+            gol: 'google'
+        }
+
+        const articles = {
+            car: {
+                per: 'presell-tarjeta-santander-rio',
+                arg: 'presell-tarjeta-santander-rio',
+                mex: 'presell-tarjeta-santander-rio',
+                col: 'presell-tarjeta-bancolombia',
+                esp: 'presell/santander-esp',
+                prt: 'presell/cartao-de-credito-wizink-rewards',
+                deu: 'presell/commerzbank-kreditkarte',
+                bra: 'presell-cartao-inter'
+            },
+            emp: {
+                bra: 'presell-emprestimo-creditas'
+            }
+        };
+
+        const base_url = 'https://formoney.com.br';
+
+        const querys = window.location.search;
+        const u = new URLSearchParams(querys).get('u');
+        let url;
+
+        if(u){
+            const sms = campaign_construct[u.substring(0, 1)];
+            const type = campaign_construct[u.substring(1, 2)];
+            const country = u.substring(2, 5);
+            const font = campaign_construct[u.substring(5, 6)];
+            const buyer = u.substring(6, u.length);
+
+            const article = (articles[type][country]) ? articles[type][country] : '';
+
+            const utm_source = `utm_source=${trafic_font[font]}`
+            const utm_campaign = `utm_campaign=${sms}-${type}-${country}-${font}-${buyer}`
+
+            const new_querys = `?${utm_source}&${utm_campaign}&utm_medium=sms`;
+
+                url = `${base_url}/${article}${new_querys}`;
+        }else{
+                url = base_url;
+        }
+
+        window.location.href = url;
+    })()
+</script>
+</body>
+</html>
