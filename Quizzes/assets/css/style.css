@@ -1,0 +1,49 @@
+*{
+    font-size: 16px;
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --border-color: red;
+}
+
+.border-color{
+    border-color: var(--border-color) !important;
+}
+
+/* ///// TEMPLATE ONE //// */
+.quiz{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.tmp-one-image{
+    width: 120px;
+    height: 120px;
+}
+
+.tmp-one-image img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.tmp-one-progress{
+    position: relative;
+    width: 100%;
+    height: 15px;
+}
+
+.tmp-one-progress::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 15px;
+    background: var(--border-color);
+}
