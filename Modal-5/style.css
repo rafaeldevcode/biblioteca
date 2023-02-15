@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    --webkit-appearance: none;
+}
+
+.cta-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 22px;
+    margin: .2rem;
+}
+
+.close{
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+}
+
+.close::after{
+    position: absolute;
+    content: '';
+    width: 85%;
+    height: 2px;
+    background: #FFF;
+    transform: rotate(45deg);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.close::before{
+    position: absolute;
+    content: '';
+    width: 85%;
+    height: 2px;
+    background: #FFF;
+    transform: rotate(-45deg);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-body{
+    width: 400px;
+    height: 500px;
+    background: rgb(255, 0, 0);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transform: translateY(-500px);
+}
+
+.popup-header, .popup-header img{
+    width: 100%;
+}
+
+.popup-footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #FFF;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.popup-cta{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 145, 0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: 1px solid rgb(0, 145, 0);
+    transition: all .4s;
+    animation: cta-animation 1s ease-in-out infinite;
+}
+
+.popup-cta:hover{
+    background: #FFF;
+    color: rgb(0, 145, 0);
+}
+
+.open-popup{
+    animation: open-popup .5s ease-out forwards;
+}
+
+.close-popup{
+    animation: close-popup .5s ease-out forwards;
+}
+
+@keyframes cta-animation{
+    0%{
+        transform: scale(1.01);
+    }
+    50%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.01);
+    }
+}
+
+@keyframes open-popup{
+    0%{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes close-popup{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+}
