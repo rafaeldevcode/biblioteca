@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" class="lang-en">
+<html lang="es">
 	<!-- fresh -->
 
 	<head>
+		<script type="text/javascript">
+			const userLang = navigator.language || navigator.userLanguage; 
+			const src = userLang == 'pt-BR' ? '//c.pubguru.net/pg.formoney.com.br.brazil' : '//m2d.m2.ai/pg.formoney.com.br.ros.js';
+			const dataHidden = userLang == 'pt-BR' ? 'OTHERS' : 'BR';
+			let scriptTag = document.createElement('script');
+				scriptTag.setAttribute('asinc', '');
+				scriptTag.setAttribute('type', 'text/javascript');
+				scriptTag.setAttribute('src', src);
+
+				document.querySelector('head').appendChild(scriptTag);
+		</script>
+
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" id="viewport"
-			content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 		<meta name="description" content="En el mercado actual, hay una gran variedad de opciones de tarjetas de crédito disponibles para los consumidores. Sin embargo, con tantas opciones disponibles, puede resultar difícil elegir la mejor tarjeta de crédito para sus necesidades específicas.">
 		<title>Conoce el ranking de tarjetas de crédito con mayor tasa de aprobación en 2023</title>
-
+		
 		<style type="text/css">
 			.single-post .content-sidebar-wrap .content .entry-content {
 				line-height: 1.8 !important;
+			}
+
+			h5 strong{
+				font-weight: bold !important;
 			}
 
 			body figure.cmg-image{
@@ -45,7 +60,7 @@
 				border-bottom: 1px solid rgb(199, 199, 199);
 				min-height: 310px;
 				width: 100%;
-				margin: 1.5rem 0;
+				margin: 4.5rem 0;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -159,12 +174,10 @@
 													de crédito para sus necesidades específicas.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk">
-													<div class="pg-lazy" data-gpt-parent="formoney_desk_leaderboard"></div>
-												</div>
-												<div class="publicity" data-pub="mobi">
-													<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-												</div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div id="formoney_desk_leaderboard_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_leaderboard"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 												<p>
 													En este artículo, exploraremos los mejores cartones de crédito
 													disponibles en el mercado, analizando sus
@@ -188,12 +201,10 @@
 													más aprueban en 2023.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk">
-													<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-												</div>
-												<div class="publicity" data-pub="mobi">
-													<div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div>
-												</div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 											</div>
 										</div>
 									</div>
@@ -213,15 +224,17 @@
 											</div>
 										</div>
 										<!-- Anúncio -->
-										<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-										<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>86% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 4.0 -</strong> ⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>86% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 4.0 - ⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>Acumulación de ScotiaPesos: acumulas el 1% del valor de las
@@ -249,8 +262,10 @@
 												</ul>
 												<p><strong>Detalles de la tarjeta de crédito Scotiabank</strong></p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 
 												<p>
 													Scotiabank es uno de los principales bancos canadienses y uno de los
@@ -283,8 +298,10 @@
 													en cada momento.</p>
 
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>Otra ventaja importante de las tarjetas de crédito del Scotiabank es
 													su programa de protección al
 													cliente. Este programa incluye medidas de seguridad avanzadas, como
@@ -310,18 +327,16 @@
 												</figure>
 											</div>
 										</div><!-- Anúncio -->
-										<div class="publicity" data-pub="desk">
-											<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-										</div>
-										<div class="publicity" data-pub="mobi">
-											<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-										</div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>89% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 4.3 -</strong> ⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>89% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 4.3 - ⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>Al solicitar la tarjeta de crédito, el cliente puede permanecer
@@ -370,8 +385,10 @@
 													principales aspectos del Cartão de Crédito Banorte.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													Uno de los principales aspectos a considerar al solicitar una
 													tarjeta de crédito Banorte es el límite de
@@ -439,8 +456,10 @@
 													máximo los beneficios de la tarjeta.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													En conclusión, el Cartão de Crédito Banorte es una excelente opción
 													para aquellos que buscan una tarjeta de crédito con
@@ -470,18 +489,16 @@
 												</figure>
 											</div>
 										</div><!-- Anúncio -->
-										<div class="publicity" data-pub="desk">
-											<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-										</div>
-										<div class="publicity" data-pub="mobi">
-											<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-										</div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>92% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 4.6 -</strong> ⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>92% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 4.6 - ⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>
@@ -506,8 +523,10 @@
 												</ul>
 												<p><strong>Detalles de la tarjeta de crédito Nubank</strong></p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 
 												<p>
 													Nubank es una empresa financiera brasileña que se ha destacado por
@@ -551,8 +570,10 @@
 													informadas y responsables.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													En resumen, la tarjeta Nubank Mastercard es una opción atractiva
 													para aquellos que buscan una tarjeta de
@@ -578,18 +599,16 @@
 												<figure class="cmg-image"><img src="./images/7.jpeg">
 											</div>
 										</div><!-- Anúncio -->
-										<div class="publicity" data-pub="desk">
-											<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-										</div>
-										<div class="publicity" data-pub="mobi">
-											<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-										</div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>94% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 4.7 -</strong> ⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>94% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 4.7 - ⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>
@@ -621,8 +640,10 @@
 													características y beneficios del cartão de crédito del Banco Comafi:
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													Variedad de tarjetas: El Banco Comafi ofrece una amplia variedad de
 													tarjetas de crédito, desde tarjetas con
@@ -670,8 +691,10 @@
 													crédito de manera más efectiva.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													En resumen, el cartão de crédito del Banco Comafi ofrece a sus
 													clientes una amplia variedad de beneficios, desde
@@ -703,18 +726,16 @@
 												<figure class="cmg-image"><img src="./images/6.jpeg">
 											</div>
 										</div><!-- Anúncio -->
-										<div class="publicity" data-pub="desk">
-											<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-										</div>
-										<div class="publicity" data-pub="mobi">
-											<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-										</div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>95% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 4.8 -</strong> ⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>95% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 4.8 - ⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>
@@ -739,8 +760,10 @@
 													confiable y fácil de usar.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													El servicio es ofrecido por Naranja, una empresa de servicios
 													financieros que se especializa en tarjetas de
@@ -803,8 +826,10 @@
 													confiable y conveniente.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													En resumen, el cartão de crédito Naranja es una opción atractiva
 													para aquellos que buscan una tarjeta de crédito fácil
@@ -837,18 +862,16 @@
 												</figure>
 											</div>
 										</div><!-- Anúncio -->
-										<div class="publicity" data-pub="desk">
-											<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-										</div>
-										<div class="publicity" data-pub="mobi">
-											<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-										</div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>96% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 4.8 -</strong> ⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>96% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 4.8 - ⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>
@@ -872,8 +895,10 @@
 													</strong></p>
 
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													El Banco Galicia es una institución financiera que ofrece una amplia
 													variedad de productos y servicios,
@@ -926,8 +951,10 @@
 													seguridad de sus clientes.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													Además, los clientes también tienen la opción de elegir cómo quieren
 													pagar su tarjeta de crédito. El Banco
@@ -953,18 +980,16 @@
 												</figure>
 											</div>
 										</div><!-- Anúncio -->
-										<div class="publicity" data-pub="desk">
-											<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-										</div>
-										<div class="publicity" data-pub="mobi">
-											<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-										</div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>96% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 5 -</strong> ⭐⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>96% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 5 - ⭐⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>
@@ -1017,8 +1042,10 @@
 													crédito del Banco Itaú:
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													Variedad de tarjetas: El Banco Itaú ofrece una variedad de tarjetas
 													de crédito que se adaptan a diferentes
@@ -1077,8 +1104,10 @@
 													avanzada para proteger la seguridad de sus clientes.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													Además, los clientes también tienen la opción de elegir cómo quieren
 													pagar su tarjeta de crédito y disponer de una línea
@@ -1105,18 +1134,16 @@
 												</figure>
 											</div>
 										</div><!-- Anúncio -->
-										<div class="publicity" data-pub="desk">
-											<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-										</div>
-										<div class="publicity" data-pub="mobi">
-											<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-										</div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>98% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 5 -</strong> ⭐⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>98% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 5 - ⭐⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>
@@ -1149,8 +1176,10 @@
 													Banco HSBC:
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													Amplia aceptación: La tarjeta de crédito del Banco HSBC es
 													ampliamente aceptada en todo el mundo, lo que permite a
@@ -1210,8 +1239,10 @@
 													sus clientes.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													Además, los clientes también tienen la opción de elegir cómo quieren
 													pagar su tarjeta de crédito y disponer
@@ -1238,18 +1269,16 @@
 												</figure>
 											</div>
 										</div><!-- Anúncio -->
-										<div class="publicity" data-pub="desk">
-											<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-										</div>
-										<div class="publicity" data-pub="mobi">
-											<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-										</div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>98% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 5 -</strong> ⭐⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>98% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 5 - ⭐⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>
@@ -1284,8 +1313,10 @@
 													Citigroup.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													La tarjeta es conocida por su amplia aceptación en establecimientos
 													tanto nacionales como internacionales,
@@ -1354,8 +1385,10 @@
 													para los titulares de la tarjeta.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													Con su enfoque en la seguridad y la conveniencia, Citibanamex se ha
 													convertido en una de las instituciones financieras
@@ -1382,18 +1415,16 @@
 												<figure class="cmg-image"><img src="./images/1.jpeg">
 											</div>
 										</div><!-- Anúncio -->
-										<div class="publicity" data-pub="desk">
-											<div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div>
-										</div>
-										<div class="publicity" data-pub="mobi">
-											<div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div>
-										</div>
+										<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard_br"></div></div>
+										<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+										<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
 										<div class="cmg_wp_content">
 											<div class="epage_start 13">
-												<p class="headline"> <strong>99% DE APROBACIÓN</strong></p>
-												<p><strong>PUNTUACIÓN: 5 -</strong> ⭐⭐⭐⭐⭐
-												</p>
-												<p><strong>PRINCIPALES VENTAJAS:</strong></p>
+												<h5><strong>99% DE APROBACIÓN</strong></h5>
+												<h5><strong>PUNTUACIÓN: 5 - ⭐⭐⭐⭐⭐</strong></h5>
+												<br>
+												<h5><strong>PRINCIPALES VENTAJAS:</strong></h5>
 
 												<ul>
 													<li>
@@ -1422,8 +1453,10 @@
 													titulares de la tarjeta.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													de la tarjeta.
 													Una de las ventajas más atractivas del cartão de crédito del Banco
@@ -1502,8 +1535,10 @@
 													recompensas por sus compras.
 												</p>
 												<!-- Anúncio -->
-												<div class="publicity" data-pub="desk"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
-												<div class="publicity" data-pub="mobi"><div class="pg-lazy" data-gpt-parent="formoney_mob_leaderboard"></div></div>
+												<div class="publicity" data-pub="desk" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_desk_content_br"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="BR"><div class="pg-lazy" data-gpt-parent="formoney_mob_content_br"></div></div>
+												<div class="publicity" data-pub="desk" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_desk_content"></div></div>
+												<div class="publicity" data-pub="mobi" data-country="OTHERS"><div class="pg-lazy" data-gpt-parent="formoney_mob_content"></div></div>
 												<p>
 													Con su enfoque en la seguridad y la conveniencia, el Banco Santander
 													se ha convertido en una de las instituciones
@@ -1551,6 +1586,12 @@
 		</div>
 
 		<script type="text/javascript">
+			// Remover os blocos de anuncios que não pertencem ao país
+			const adHidden = document.querySelectorAll(`[data-country="${dataHidden}"]`);
+				adHidden.forEach((ad) => {
+					ad.remove();
+				});
+
 			(function (){
 				const ids = ["124587", "877078", "22378", "735671", "782517", "035468", "925463", "734252", "172635", "916353", "183925"];
 				const articles = document.querySelectorAll('article');
