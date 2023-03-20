@@ -130,3 +130,27 @@ git fetch origin
 git checkout --track origin/sua_ramificação
 
 ---------------------------------------------------------------------------------
+
+# Forçar um pull request
+Estes comando são utilizados quando a divergências das branchs remotas e da local e ocorre erro ao realizar um git pull
+
+```
+    git fetch
+```
+```
+    git reset --hard origin/nome_da_branch
+```
+
+(OBSS): Cuidado ao executar esses comandos, pois ele irá forçar um pull request, sobrescrevendo suas alterações locais pelas, que estão na remota
+
+---------------------------------------------------------------------------------
+# Forçar um git push
+Estes comando são utilizados quando a divergências das branchs remotas e da local e ocorre erro ao realizar um git push
+
+```
+    git push origin nome_da_branch -f
+```
+
+(OBSS): Cuidado ao executar esses comandos, pois ele irá forçar um push, sobrescrevendo suas alterações remotas pelas que estão na local
+
+---------------------------------------------------------------------------------
