@@ -1,0 +1,184 @@
+ <script>
+(function () {
+    const params = new URLSearchParams(window.location.search);
+    const utm_params = [];
+    var source = "";
+    var content = "";
+    
+    
+    
+    params.forEach(function (value, key) {
+        if (key.startsWith("utm_")) {
+            utm_params.push(key + "=" + value);
+            if (key == "utm_source") {
+                source = value;
+            }
+            if (key == "utm_content") {
+                content = value;
+            }
+            
+            if (key == "utm_campaign") {
+                campaign = value;
+            }
+        }
+          if (key == "fb") {
+            utm_params.push(key + "=" + value);
+          }
+            
+          if(key == "tt") {
+            utm_params.push(key + "=" + value);
+          }
+
+          if(key == "kw") {
+            utm_params.push(key + "=" + value);
+          }
+          
+          if(key == "rewards") {
+            utm_params.push(key + "=" + value);
+          }
+    });
+
+    utm_search = utm_params.join("&");
+
+    
+    if (utm_search.length > 0) {
+
+        function uuidv4() {
+            return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+                var r = (Math.random() * 16) | 0,
+                    v = c == "x" ? r : (r & 0x3) | 0x8;
+                return v.toString(16);
+            });
+        }
+        function getCookies() {
+            var c = document.cookie,
+                v = 0,
+                cookies = {};
+            if (document.cookie.match(/^\s*\$Version=(?:"1"|1);\s*(.*)/)) {
+                c = RegExp.$1;
+                v = 1;
+            }
+            if (v === 0) {
+                c.split(/[,;]/).map(function (cookie) {
+                    var parts = cookie.split(/=/, 2),
+                        name = decodeURIComponent(parts[0].trimLeft()),
+                        value = parts.length > 1 ? decodeURIComponent(parts[1].trimRight()) : null;
+                    cookies[name] = value;
+                });
+            } else {
+                c.match(/(?:^|\s+)([!#$%&'*+\-.0-9A-Z^`a-z|~]+)=([!#$%&'*+\-.0-9A-Z^`a-z|~]*|"(?:[\x20-\x7E\x80\xFF]|\\[\x00-\x7F])*")(?=\s*[,;]|$)/g).map(function ($0, $1) {
+                    var name = $0,
+                        value = $1.charAt(0) === '"' ? $1.substr(1, -1).replace(/\\(.)/g, "$1") : $1;
+                    cookies[name] = value;
+                });
+            }
+            return cookies;
+        }
+        function applyUTMS() {
+            Array.from(document.querySelectorAll("a[href]")).forEach((item) => {
+
+                if (item.href.indexOf("mailto:") === -1 && item.href.indexOf("tel:") === -1) {
+                    let newHref = item.href + (item.href.indexOf("?") === -1 ? "?" : "&");
+                    let uid = uuidv4();
+                    let cookies = getCookies();
+                    let data = { uid: uid, fbc: cookies._fbc, fbp: cookies._fbp, ga: cookies._ga };
+                    
+                    if (newHref.indexOf("v2.afilio12.com.br") >= 0) {
+                        let tracking = source + "-" + content;
+                        if (!source || !content) {
+                            tracking = "conteudo";
+                        }
+                        //let urlQuery = "aff_xtra=" + tracking + "_" + btoa(JSON.stringify(data));
+                        let urlQuery = "aff_xtra=" + btoa(JSON.stringify(data));
+                        if (newHref.indexOf("aff_xtra") >= 0) {
+                            newHref = newHref.replace(/aff_xtra=([a-zA-Z0-9-_]*)/, urlQuery);
+                        } else {
+                            newHref += urlQuery;
+                        }
+                        item.removeAttribute("href");
+                        item.setAttribute("onclick", `partnerRedirect("${newHref}", "${uid}")`);
+                        item.setAttribute("style", "cursor: pointer;");
+                    }else if (newHref.indexOf("tracking.offerbox123.com.br") >= 0 || newHref.indexOf("igoal.go2cloud.org") >= 0) {
+                    
+                        let tracking = source + "-" + content;
+                        if (!source || !content) {
+                            tracking = "conteudo";
+                        }
+                        if(!campaign){
+                        campaign = "sem-campaign";
+                        }
+                        //let urlQuery = "aff_xtra=" + tracking + "_" + btoa(JSON.stringify(data));
+                        let urlQuery = "aff_sub=" + campaign + "&source=" + source;
+                        //let urlQuery = "aff_sub=&source=";
+                        
+                        if (newHref.indexOf("aff_sub") >= 0) {
+                            newHref = newHref.replace(/aff_sub=([a-zA-Z0-9-_]*)/, urlQuery);
+                        } else {
+                           newHref += urlQuery;
+                        }
+                        item.removeAttribute("href");
+                        item.setAttribute("onclick", `partnerRedirect("${newHref}", "${uid}")`);
+                        item.setAttribute("style", "cursor: pointer;");
+                    }else if (newHref.indexOf("tracking.foregon.com") >= 0) {
+                    
+                        let tracking = source + "-" + content;
+                        if (!source || !content) {
+                            tracking = "conteudo";
+                        }
+                        if(!campaign){
+                        campaign = "sem-campaign";
+                        }
+                        //let urlQuery = "aff_xtra=" + tracking + "_" + btoa(JSON.stringify(data));
+                        let urlQuery = "aff_sub=" + campaign;
+                       
+                        
+                        if (newHref.indexOf("aff_sub") >= 0) {
+                            newHref = newHref.replace(/aff_sub=([a-zA-Z0-9-_]*)/, urlQuery);
+                        } else {
+                           newHref += urlQuery;
+                        }
+                        item.removeAttribute("href");
+                        item.setAttribute("onclick", `partnerRedirect("${newHref}", "${uid}")`);
+                        item.setAttribute("style", "cursor: pointer;");
+                    }else{
+                    	
+                        newHref += utm_search;
+                        newHref = verifyHastag(newHref);
+                        item.setAttribute("href", newHref);
+
+                        function verifyHastag(href){
+                            let newHref = href.split('?');
+
+                            if(newHref[0].indexOf("#") > -1){
+                                newHref = href.split('#');
+                                let params = newHref[1];
+                                params = params.split('?');
+                                params = `?${params[1]}#${params[0]}`;
+
+                                return newHref[0]+params;
+                            }
+
+                            return href;
+                        }
+                        
+                    }
+                }
+            });
+        }
+        if (document.readyState === "complete") {
+            applyUTMS();
+            
+        } else {
+            window.addEventListener("load", function () {
+                applyUTMS();
+                
+            });
+        }
+    }
+})();
+function partnerRedirect(href, id) {
+    fbq("trackCustom", "PartnerRedirect", { external_id: id });
+    window.location.href = href;
+}
+
+</script>
